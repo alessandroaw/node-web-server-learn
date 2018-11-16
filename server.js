@@ -4,6 +4,19 @@ const fs = require('fs');
 const port = process.env.PORT || 3000;
 
 var app = express();
+var orang = [{
+		nama:'alessandro',
+		umur: 20
+	},
+	{
+		nama:'analicia',
+		umur: 18
+	},
+	{
+		nama:'adelita',
+		umur: 12
+	}];
+
 
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('getCurrentYear', () => {
@@ -42,6 +55,7 @@ app.get('/about', (req, res) => {
 	// res.send('<h1>Hello Express!!<h1>');
 	res.render('about.hbs', {
 		pageTitle:'About Page',
+		orang
 	});
 });
 

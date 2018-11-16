@@ -7,7 +7,13 @@
  <body>
  	{{> header}}
  	<p>Some text here</p>
- 	
+ 	<ul>
+ 		{{#each orang}}
+		<li>{{nama}} : {{umur}}</li>
+ 		{{/each}}
+ 	</ul>
+
+
  	{{> footer}}
  </body>
  </html>
